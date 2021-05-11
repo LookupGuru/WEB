@@ -1,0 +1,36 @@
+{
+  "name": "discordid",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.1",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "simplebar-vue": "^1.6.2",
+    "vue": "^2.6.11",
+    "vue-clickaway": "^2.2.2",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.2.0",
+    "vuelidate": "^0.7.6",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.1.2",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "autoprefixer": "9",
+    "node-sass": "^4.12.0",
+    "postcss": "7",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

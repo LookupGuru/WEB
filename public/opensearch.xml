@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>LookupGuru</ShortName>
+  <Description>LookupGuru ile Discord ID Sorgulama</Description>
+
+  <Url type="text/html" method="get"
+       template="https://lookup.guru/{searchTerms}&amp;sourceid=opensearch"/>
+  <Image width="48" height="48">https://lookup.guru/favicon.ico</Image>
+
+  <SyndicationRight>limited</SyndicationRight>
+  <Developer>LookupGuru Development Team</Developer>
+  <AdultContent>false</AdultContent>
+
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+
+  <Language>tr</Language>
+
+  <moz:IconUpdateUrl>https://lookup.guru/favicon.ico</moz:IconUpdateUrl>
+  <moz:UpdateInterval>7</moz:UpdateInterval>
+</OpenSearchDescription>

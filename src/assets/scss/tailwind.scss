@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition {
+  &-search {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  }
+  &-all, &-shadow, &-colors, &-search {
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+  }
+}
