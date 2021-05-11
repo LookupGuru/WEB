@@ -22,13 +22,24 @@
       </div>
 
       <div class="mt-3 flex space-x-2">
-        <button type="submit" class="transition-colors w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          Sorgulama Yap
+        <button
+          :disabled="loading"
+          type="submit"
+          class="transition-colors w-full flex justify-center items-center h-[38px] px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-500 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+        >
+          <svg v-if="loading" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" fill="none" r="30" stroke="fff" stroke-width="10"></circle>
+            <circle cx="50" cy="50" fill="none" r="30" stroke="#fff" stroke-width="8" stroke-linecap="round" transform="rotate(167.288 50 50)">
+              <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+              <animate attributeName="stroke-dasharray" calcMode="linear" values="1.8849555921538759 186.6106036232337;90.47786842338603 98.01769079200155;1.8849555921538759 186.6106036232337" keyTimes="0;0.5;1" dur="1" begin="0s" repeatCount="indefinite"></animate>
+            </circle>
+          </svg>
+          <span v-else class="text-center">Sorgulama Yap</span>
         </button>
         <a
           onclick="return false;"
           href='javascript:{(function(w,d){let id=prompt("Kullanıcı ID veya Herhangi Bir ID","");if(id!=null){window.open("http://localhost:8080/"+id,"_blank")}})(window,document)}'
-          class="transition-colors inline-flex justify-center items-center w-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
+          class="transition-colors inline-flex justify-center items-center w-[38px] h-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -49,6 +60,7 @@
     data() {
       return {
         alert: false,
+        loading: false,
         input: "",
         result: {}
       }
@@ -69,10 +81,15 @@
         if (this.$v.$invalid) return that.$v.$touch();
 
         that.loading = true;
+        this.$emit("loading", true)
+
         ApiUtil.post('lookup', that.$data).then(({ data: result }) => {
           that.loading = false;
+          this.$emit("loading", false)
+
           if (result.success) {
             this.$emit("result", result.data)
+            this.$router.push({ params: { id: result.data.id } }).catch(() => {})
           } else {
             this.alert = true;
           }
@@ -83,6 +100,14 @@
       if (this.$route.params.id) {
         this.input = this.$route.params.id;
         this.sendForm();
+      }
+    },
+    watch: {
+      $route(to, from) {
+        if (this.$route.params.id) {
+          this.input = this.$route.params.id;
+          this.sendForm();
+        }
       }
     }
   }

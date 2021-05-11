@@ -14,6 +14,16 @@ import "./assets/scss/tailwind.scss"
 import VueMeta from 'vue-meta'
 Vue.use(VueMeta)
 
+// Clipboard
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard)
+
+// Tooltip
+import VTooltip from 'v-tooltip'
+Vue.use(VTooltip, {
+  defaultHtml: true,
+})
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -21,7 +31,7 @@ new Vue({
   store,
   render: h => h(App),
   metaInfo: {
-    title: "Discord Lookup",
-    titleTemplate: '%s - DiscordID'
+    title: "Discord Search ID",
+    titleTemplate: '%s - Lookup.Guru'
   }
 }).$mount('#app')
