@@ -7,9 +7,9 @@ import store from './store'
 import { ApiUtil } from "@/utils/api.util";
 
 ApiUtil.init(
-  process.env.NODE_ENV === "development" ?
-    "http://localhost:3600/" :
-    "https://lookupguru.herokuapp.com/"
+  process.env.NODE_ENV === "production" ?
+    "https://lookupguru.herokuapp.com/" :
+    "http://localhost:3600/"
 );
 
 // Import Tailwind CSS
@@ -27,6 +27,8 @@ Vue.use(VueClipboard)
 import VTooltip from 'v-tooltip'
 Vue.use(VTooltip, {
   defaultHtml: true,
+  trigger: "hover",
+  defaultHideOnTargetClick: false
 })
 
 Vue.config.productionTip = false
