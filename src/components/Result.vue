@@ -90,7 +90,7 @@
         return moment(unix).locale("tr").fromNow(true);
       },
       addStar() {
-        let getData = JSON.parse(localStorage.getItem("LookupGuruFavorites")) || [];
+        let getData = JSON.parse(localStorage.getItem("LookupGuruStar")) || [];
 
         if (getData.find(item => item.id === this.result.id)) {
           getData.splice(getData.findIndex(item => item.id === this.result.id), 1);
@@ -99,12 +99,22 @@
           getData.push(this.result)
           this.star = true;
         }
-        localStorage.setItem("LookupGuruFavorites", JSON.stringify(getData));
+        localStorage.setItem("LookupGuruStar", JSON.stringify(getData));
+      },
+      addHistory() {
+        let getData = JSON.parse(localStorage.getItem("LookupGuruHistory")) || [];
+
+        if (!getData.find(item => item.id === this.result.id)) {
+          localStorage.setItem("LookupGuruHistory", JSON.stringify([ this?.result, ...getData ]));
+        }
       }
     },
     created() {
-      let getData = JSON.parse(localStorage.getItem("LookupGuruFavorites")) || [];
+      let getData = JSON.parse(localStorage.getItem("LookupGuruStar")) || [];
       this.star = !!getData.find(item => item.id === this.$route.params.id);
+
+      // Add History
+      this.addHistory()
     }
   }
 </script>
