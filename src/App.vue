@@ -1,5 +1,5 @@
 <template>
-  <div class="app max-w-[26rem] w-full p-4 sm:pt-20 sm:pb-12 h-screen flex flex-col">
+  <div class="app max-w-[26rem] w-full p-4 sm:py-12 h-screen flex flex-col">
     <router-view/>
     <div class="mt-auto text-center text-sm"><a href="https://github.com/berkaltiok" class="font-bold hover:underline" target="_blank">Berk Altıok</a> - Not affiliated with Discord, Inc.</div>
   </div>
