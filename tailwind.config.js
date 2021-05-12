@@ -9,6 +9,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        gray: colors.gray,
+      },
       height: {
         "screen": "var(--app-height, 100vh)"
       },
