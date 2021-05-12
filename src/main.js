@@ -5,7 +5,12 @@ import store from './store'
 
 // Set Api
 import { ApiUtil } from "@/utils/api.util";
-ApiUtil.init('http://localhost:3600/');
+
+ApiUtil.init(
+  process.env.NODE_ENV === "development" ?
+    "http://localhost:3600/" :
+    "https://lookupguru.herokuapp.com/"
+);
 
 // Import Tailwind CSS
 import "./assets/scss/tailwind.scss"
