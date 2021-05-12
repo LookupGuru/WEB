@@ -5,7 +5,7 @@
   <Description>LookupGuru ile Discord ID Sorgulama</Description>
 
   <Url type="text/html" method="get"
-       template="https://lookup.guru/{searchTerms}&amp;sourceid=opensearch"/>
+       template="https://lookup.guru/{searchTerms}?sourceid=opensearch"/>
   <Image width="48" height="48">https://lookup.guru/favicon.ico</Image>
 
   <SyndicationRight>limited</SyndicationRight>
