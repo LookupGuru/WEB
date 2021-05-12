@@ -54,12 +54,12 @@
           active: 0,
           items: [
             {
-              title: "Favorilerim",
-              list: "LookupGuruStar"
-            },
-            {
               title: "Son Aramalarım",
               list: "LookupGuruHistory"
+            },
+            {
+              title: "Favorilerim",
+              list: "LookupGuruStar"
             }
           ],
           list: []
