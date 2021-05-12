@@ -8,6 +8,8 @@
           class=" rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full px-3 sm:text-sm border-gray-300 rounded-md"
           :class="{ 'form-control-error' : $v.input.$error }"
           type="text"
+          pattern="[0-9]*"
+          inputmode="numeric"
           id="input"
           name="input"
           placeholder="Discord ID"
@@ -39,7 +41,7 @@
         <a
           onclick="return false;"
           href='javascript:{(function(w,d){let id=prompt("Kullanıcı ID veya Herhangi Bir ID","");if(id!=null){window.open("https://lookup.guru/"+id,"_blank")}})(window,document)}'
-          class="transition-colors inline-flex justify-center items-center w-[38px] h-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
+          class="hidden transition-colors sm:inline-flex justify-center items-center w-[38px] h-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
