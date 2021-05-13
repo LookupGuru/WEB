@@ -56,10 +56,20 @@
   @tailwind components;
   @tailwind utilities;
 
+  // Body
   body {
     background: #f3f4f6;
     min-height: var(--app-height, 100vh);
 
     @apply h-full flex flex-col justify-center items-center text-gray-800;
+  }
+
+  // Components
+  .tooltip {
+    @apply bg-gray-200 bg-opacity-50 border border-gray-100 mt-1 px-2 py-1 rounded-md backdrop-filter backdrop-blur-sm text-xs font-bold;
+
+    &__text {
+      @apply font-normal;
+    }
   }
 </style>
