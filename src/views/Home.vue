@@ -1,11 +1,11 @@
 <template>
   <div>
     <Search class="p-4 pt-3 bg-white shadow rounded-lg overflow-hidden" @result="getResult" @loading="getLoading"/>
-    <template v-if="$route.params.id">
+    <template v-if="!loading && result && $route.params.id">
       <ResultPlaceholder v-if="loading"/>
       <Result :result="result" v-else/>
     </template>
-    <List v-if="!$route.params.id && !loading"/>
+    <List v-if="(!loading && !result) || !$route.params.id"/>
   </div>
 </template>
 

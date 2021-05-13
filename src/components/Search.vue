@@ -22,7 +22,6 @@
           <span v-if="!$v.input.numeric">Sadece sayı (Discord ID) kabul edilmektedir.</span>
         </span>
       </div>
-
       <div class="mt-3 flex space-x-2">
         <button
           :disabled="loading"
@@ -38,15 +37,28 @@
           </svg>
           <span v-else class="text-center">Sorgulama Yap</span>
         </button>
-        <a
-          onclick="return false;"
-          href='javascript:{(function(w,d){let id=prompt("Kullanıcı ID veya Herhangi Bir ID","");if(id!=null){window.open("https://lookup.guru/"+id,"_blank")}})(window,document)}'
-          class="hidden transition-colors sm:inline-flex justify-center items-center w-[38px] h-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
-        </a>
+        <template>
+          <a
+            v-if="!loading && !result"
+            onclick="return false;"
+            href='javascript:{(function(w,d){let id=prompt("Kullanıcı ID veya Herhangi Bir ID","");if(id!=null){window.open("https://lookup.guru/"+id,"_blank")}})(window,document)}'
+            class="hidden transition-colors sm:inline-flex justify-center items-center w-[38px] h-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </a>
+          <button
+            v-else
+            type="button"
+            @click="goHome"
+            class="transition-colors w-[38px] flex-none flex justify-center items-center h-[38px] border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none select-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </button>
+        </template>
       </div>
     </form>
   </div>
@@ -61,10 +73,9 @@
   export default {
     data() {
       return {
-        alert: false,
         loading: false,
         input: "",
-        result: {}
+        result: null
       }
     },
     mixins: [validationMixin],
@@ -78,24 +89,27 @@
     },
     methods: {
       sendForm() {
-        let that = this;
+        this.result = null;
+        if (this.$v.$invalid) return this.$v.$touch();
 
-        if (this.$v.$invalid) return that.$v.$touch();
-
-        that.loading = true;
+        this.loading = true;
         this.$emit("loading", true)
 
-        ApiUtil.post('lookup', that.$data).then(({ data: result }) => {
-          that.loading = false;
+        ApiUtil.post('lookup', this.$data).then(({ data: result }) => {
+          this.loading = false;
           this.$emit("loading", false)
 
           if (result.success) {
+            this.result = result.data;
             this.$emit("result", result.data)
             this.$router.push({ params: { id: result.data.id } }).catch(() => {})
-          } else {
-            this.alert = true;
           }
         });
+      },
+      goHome() {
+        this.input = "";
+        this.result = null;
+        this.$router.push("/").catch(() => {})
       }
     },
     created() {
@@ -108,6 +122,7 @@
       $route(to, from) {
         if (this.$route.params.id) {
           this.input = this.$route.params.id;
+          this.$emit("result", null)
           this.sendForm();
         }
       }
