@@ -12,8 +12,8 @@
       </div>
     </div>
     <div class="mt-2 bg-white shadow rounded-lg overflow-auto max-h-[500px]">
-      <template v-for="result in tab.list">
-        <router-link :to="result.id" class="flex items-center py-3 pl-4 pr-3 border-b last:border-b-0 cursor-pointer" v-if="result.id">
+      <template v-for="result in tab.list" v-if="tab.list[0] !== null">
+        <router-link :to="result.id" class="flex items-center py-3 pl-4 pr-3 border-b last:border-b-0 cursor-pointer hover:bg-gray-50 hover:bg-opacity-40 transition-colors" v-if="result.id">
           <div class="flex-none flex justify-center items-center mr-3.5 rounded-full bg-gray-100 overflow-hidden w-[2rem] h-[2rem]">
             <img :src="result.avatar_url" :alt="result.username" class="h-full w-full object-cover object-center" v-if="result.avatar_url">
             <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-current text-gray-700 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
