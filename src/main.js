@@ -28,6 +28,15 @@ Vue.use(VTooltip, {
   defaultHideOnTargetClick: false
 })
 
+// Google Analytics
+import VueAnalytics from 'vue-analytics';
+if (process.env.NODE_ENV === "production") {
+  Vue.use(VueAnalytics, {
+    id: 'G-2VH8YENE66',
+    router
+  })
+}
+
 Vue.config.productionTip = false
 
 new Vue({
