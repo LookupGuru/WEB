@@ -32,7 +32,7 @@ Vue.use(VTooltip, {
 import VueAnalytics from 'vue-analytics';
 if (process.env.NODE_ENV === "production") {
   Vue.use(VueAnalytics, {
-    id: 'G-2VH8YENE66',
+    id: 'UA-89120054-6',
     router
   })
 }
