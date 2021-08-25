@@ -1,5 +1,19 @@
 <template>
   <div class="bg-white shadow rounded-md overflow-auto mt-4" v-if="result">
+    <div class="border-b w-full min-h-[60px]" :style="{ backgroundColor: result.banner.color }" v-if="result.type === 'USER'">
+      <a v-if="result.banner.url" :href="result.banner.url+'?size=1024'" target="_blank" class="group flex relative w-full h-[120px]">
+        <div class="absolute top-0 left-0 h-full w-full opacity-0 group-hover:opacity-100 bg-black bg-opacity-50 transition-all flex items-center justify-center duration-200 z-30">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </div>
+        <img
+          :src="result.banner.url"
+          :alt="result.username"
+          class="h-full w-full object-cover object-center relative z-20"
+        >
+      </a>
+    </div>
     <div class="flex items-center py-3 px-4 border-b" v-if="result.type === 'USER'">
       <a :href="result.avatar_url+'?size=1024'" target="_blank" class="group flex-none mr-1.5 rounded-full bg-gray-100 overflow-hidden relative w-[4.3rem] h-[4.3rem]">
         <div class="absolute top-0 left-0 h-full w-full opacity-0 group-hover:opacity-100 bg-black bg-opacity-50 transition-all flex items-center justify-center duration-200 z-30">
