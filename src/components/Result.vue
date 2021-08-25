@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white shadow rounded-md overflow-auto mt-4" v-if="result">
-    <div class="border-b w-full min-h-[60px]" :style="{ backgroundColor: result.banner.color }" v-if="result.type === 'USER'">
+    <div class="border-b w-full min-h-[60px]" :style="{ backgroundColor: result.banner.color }" v-if="result.type === 'USER' && (result.banner.color || result.banner.url)">
       <a v-if="result.banner.url" :href="result.banner.url+'?size=1024'" target="_blank" class="group flex relative w-full h-[120px]">
         <div class="absolute top-0 left-0 h-full w-full opacity-0 group-hover:opacity-100 bg-black bg-opacity-50 transition-all flex items-center justify-center duration-200 z-30">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -71,7 +71,7 @@
         <div>
           <p class="text-sm font-medium text-gray-900">Kullanıcı ID</p>
           <p class="text-sm text-gray-500">{{ result.id }}</p>
-        </div>
+        </div>+
         <div>
           <p class="text-sm font-medium text-gray-900">Kullanıcı Tipi</p>
           <p class="text-sm text-gray-500">{{ result.is_bot ? 'Bot Hesap' : 'Normal Hesap' }}</p>
