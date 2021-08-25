@@ -71,7 +71,7 @@
         <div>
           <p class="text-sm font-medium text-gray-900">Kullanıcı ID</p>
           <p class="text-sm text-gray-500">{{ result.id }}</p>
-        </div>+
+        </div>
         <div>
           <p class="text-sm font-medium text-gray-900">Kullanıcı Tipi</p>
           <p class="text-sm text-gray-500">{{ result.is_bot ? 'Bot Hesap' : 'Normal Hesap' }}</p>
