@@ -1,9 +1,9 @@
 <template>
   <div>
     <Search class="p-4 pt-3 bg-white shadow rounded-lg overflow-hidden" @result="getResult" @loading="getLoading"/>
-    <template v-if="!loading && result && $route.params.id">
-      <ResultPlaceholder v-if="loading"/>
-      <Result :result="result" v-else/>
+    <template v-if="result && $route.params.id">
+      <Result :result="result" v-if="result"/>
+      <ResultPlaceholder v-else/>
     </template>
     <List v-if="(!loading && !result) || !$route.params.id"/>
   </div>
