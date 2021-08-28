@@ -18,8 +18,8 @@
             <template v-if="result.type == 'USER'">
               <img
                 :alt="result.username"
-                :src="result.avatar_url || result.avatar.url"
-                v-if="result.avatar_url || (result.avatar && result.avatar.id)"
+                :src="result.avatar && result.avatar.url"
+                v-if="result.avatar && result.avatar.id"
                 class="relative h-full w-full object-cover object-center z-20"
                 @error="hiddenImage"
               >
