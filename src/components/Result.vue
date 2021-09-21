@@ -53,7 +53,7 @@
           <div class="flex items-center px-2 mt-[1px] select-none">
             <div
               v-for="(content, flag) in result.flags"
-              class="h-[30px] w-[30px] p-[4px] hover:bg-gray-100 transition-colors rounded-md mr-[1px] cursor-pointer"
+              class="h-[30px] p-[4px] hover:bg-gray-100 transition-colors rounded-md mr-[1px] cursor-pointer"
               v-tooltip.bottom="{
               content: `<div class='tooltip__title'>${content.title}</div>` + (content.text ? `<div class='tooltip__text'>${content.text}</div>` : '')
             }"
