@@ -15,14 +15,14 @@ export default {
       maxLength: "Must be a maximum of {0} characters.",
       numeric: "Only numbers (Discord ID) are accepted."
     },
-    button: "Search Now",
+    button: "Search",
     quick: "User ID or Any ID"
   },
   list: {
     recent: "Recent Searches",
     favorites: "Favorites",
     empty: "This List is Empty",
-    approve: "Approve"
+    approve: "Remove"
   },
   result: {
     title: {

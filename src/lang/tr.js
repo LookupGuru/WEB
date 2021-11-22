@@ -22,7 +22,7 @@ export default {
     recent: "Son Aramalarım",
     favorites: "Favorilerim",
     empty: "Bu Liste Bomboş",
-    approve: "Onayla"
+    approve: "Kaldır"
   },
   result: {
     title: {
