@@ -32,8 +32,8 @@ export default {
       age: "Age"
     },
     type: {
-      user: "Normal Hesap",
-      bot: "Bot Hesap"
+      user: "Normal Account",
+      bot: "Bot Account"
     },
     favorites: {
       add: "Add Favorites",
