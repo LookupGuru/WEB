@@ -33,7 +33,7 @@ const config = {
 //   }
 // );
 
-export const ApiUtil = {
+export const Api = {
   init(baseURL) {
     axios.defaults.baseURL = baseURL;
   },
