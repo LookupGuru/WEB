@@ -1,12 +1,13 @@
 <template>
-  <div class="app max-w-[28rem] w-full p-4 sm:py-12 h-screen flex flex-col">
+  <div class="app max-w-[29rem] w-full p-4 sm:py-12 h-screen flex flex-col">
     <router-view/>
-    <div class="mt-auto text-center text-sm pt-4 pb-2"><a href="https://github.com/LookupGuru/WEB" class="font-bold hover:underline" target="_blank">Berk Altıok</a> - Not affiliated with Discord, Inc.</div>
+    <Footer v-if="layout.footer"/>
   </div>
 </template>
 
 <script>
   import Header from "@/components/Layout/Header";
+  import Footer from "@/components/Layout/Footer";
 
   export default {
     data() {
@@ -15,7 +16,7 @@
         bars: false,
         layoutBase: {
           header: false,
-          footer: false
+          footer: true
         },
         layout: {}
       }
@@ -40,7 +41,8 @@
       }
     },
     components: {
-      Header
+      Header,
+      Footer
     },
     methods: {
       screenSize() {

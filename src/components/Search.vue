@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="flex flex-col" @submit.prevent="sendForm()">
-      <label for="input" class="block text-sm font-medium text-gray-700 mb-1.5">Kullanıcı ID'si / Herhangi Bir ID</label>
+      <label for="input" class="block text-sm font-medium text-gray-700 mb-1.5">{{ $t("search.title") }}</label>
       <div class="relative">
         <input
           v-model="$v.input.$model"
@@ -16,10 +16,10 @@
           autocomplete="off"
         >
         <span class="flex flex-col text-xs text-red-500 pt-1 px-1" v-if="$v.input.$error">
-          <span v-if="!$v.input.required">Bu alan zorunludur.</span>
-          <span v-if="!$v.input.minLength">En az {{ $v.input.$params.minLength.min }} karakter olmalı.</span>
-          <span v-if="!$v.input.maxLength">En fazla {{ $v.input.$params.maxLength.max }} karakter olmalı.</span>
-          <span v-if="!$v.input.numeric">Sadece sayı (Discord ID) kabul edilmektedir.</span>
+          <span v-if="!$v.input.required">{{ $t('search.input.required') }}</span>
+          <span v-if="!$v.input.minLength">{{ $t('search.input.minLength', [ $v.input.$params.minLength.min ]) }}</span>
+          <span v-if="!$v.input.maxLength">{{ $t('search.input.maxLength', [ $v.input.$params.maxLength.max ]) }}</span>
+          <span v-if="!$v.input.numeric">{{ $t('search.input.numeric') }}</span>
         </span>
       </div>
       <div class="mt-3 flex space-x-2">
@@ -35,13 +35,13 @@
               <animate attributeName="stroke-dasharray" calcMode="linear" values="1.8849555921538759 186.6106036232337;90.47786842338603 98.01769079200155;1.8849555921538759 186.6106036232337" keyTimes="0;0.5;1" dur="1" begin="0s" repeatCount="indefinite"></animate>
             </circle>
           </svg>
-          <span v-else class="text-center">Sorgulama Yap</span>
+          <span v-else class="text-center">{{ $t("search.button") }}</span>
         </button>
         <template>
           <a
             v-if="!loading && !result"
             onclick="return false;"
-            href='javascript:{(function(w,d){let id=prompt("Kullanıcı ID veya Herhangi Bir ID","");if(id!=null){window.open("https://lookup.guru/"+id,"_blank")}})(window,document)}'
+            :href='`javascript:{(function(w,d){let id=prompt("${$t("search.quick")}","");if(id!=null){window.open("https://lookup.guru/"+id,"_blank")}})(window,document)}`'
             class="hidden transition-colors sm:inline-flex justify-center items-center w-[38px] h-[38px] flex-none border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-0"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -65,7 +65,7 @@
 </template>
 
 <script>
-  import { ApiUtil } from "@/utils/api.util";
+  import { Api } from "@/utils/api";
 
   const { validationMixin } = require('vuelidate')
   const { required, minLength, maxLength, numeric } = require('vuelidate/lib/validators')
@@ -95,7 +95,7 @@
         this.loading = true;
         this.$emit("loading", true)
 
-        ApiUtil.post('lookup', this.$data).then(({ data: result }) => {
+        Api.post('lookup', this.$data).then(({ data: result }) => {
           this.loading = false;
           this.$emit("loading", false)
 

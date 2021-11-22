@@ -1,7 +1,7 @@
 <template>
   <div>
     <Search class="p-4 pt-3 bg-white shadow rounded-lg overflow-hidden" @result="getResult" @loading="getLoading"/>
-    <template v-if="result && $route.params.id">
+    <template v-if="$route.params.id">
       <Result :result="result" v-if="result"/>
       <ResultPlaceholder v-else/>
     </template>

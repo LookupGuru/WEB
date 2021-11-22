@@ -7,7 +7,7 @@
           :class="{ '!text-gray-800 border-indigo-700' : key === tab.active }"
           @click="updateTab(key)"
         >
-          {{ item.title }}
+          {{ $t(item.title) }}
         </button>
       </div>
     </div>
@@ -15,7 +15,7 @@
       <template v-for="result in tab.list" v-if="tab.list[0] !== null">
         <router-link :to="result.id" class="flex items-center py-3 pl-4 pr-3 border-b last:border-b-0 cursor-pointer hover:bg-gray-50 hover:bg-opacity-40 transition-colors" v-if="result.id">
           <div class="flex-none flex justify-center items-center mr-3.5 rounded-full bg-gray-100 overflow-hidden w-[2rem] h-[2rem] relative">
-            <template v-if="result.type == 'USER'">
+            <template v-if="result.type === 'USER'">
               <img
                 :alt="result.username"
                 :src="result.avatar && result.avatar.url"
@@ -42,7 +42,7 @@
             class="flex-none flex items-center justify-center ml-auto min-w-[28px] h-[28px] group transition-all hover:bg-red-50 rounded-md focus:outline-none outline-none"
             :class="{ 'bg-red-50' : result.id === deleteItem }"
           >
-            <span class="uppercase text-xs text-red-500 px-2 font-semibold" v-if="result.id === deleteItem">Onayla</span>
+            <span class="uppercase text-xs text-red-500 px-2 font-semibold" v-if="result.id === deleteItem">{{ $t("list.approve") }}</span>
             <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-current text-gray-700 group-hover:text-red-500 transition-colors h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
             </svg>
@@ -53,7 +53,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current text-gray-500 h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <span class="text-center mt-1.5 text-gray-500 text-sm font-semibold">Bu Liste Bomboş</span>
+        <span class="text-center mt-1.5 text-gray-500 text-sm font-semibold">{{ $t("list.empty") }}</span>
       </div>
     </div>
   </div>
@@ -67,11 +67,11 @@
           active: 0,
           items: [
             {
-              title: "Son Aramalarım",
+              title: "list.recent",
               list: "LookupGuruHistory"
             },
             {
-              title: "Favorilerim",
+              title: "list.favorites",
               list: "LookupGuruStar"
             }
           ],

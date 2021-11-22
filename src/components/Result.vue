@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="flex-none ml-auto cursor-pointer group" @click="toggleStar" v-tooltip.left="star ? 'Favorilerimden Çıkart' : 'Favorilerime Ekle'">
+        <div class="flex-none ml-auto cursor-pointer group" @click="toggleStar" v-tooltip.left="star ? $t('result.favorites.remove') : $t('result.favorites.add')">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="stroke-current h-6 w-6 group-hover:text-yellow-500"
@@ -79,20 +79,20 @@
     <div class="grid sm:grid-cols-2 auto-rows-auto py-3 px-4 gap-3">
       <template v-if="result.type === 'USER'">
         <div>
-          <p class="text-sm font-medium text-gray-900">Kullanıcı ID</p>
+          <p class="text-sm font-medium text-gray-900">{{ $t("result.title.id") }}</p>
           <p class="text-sm text-gray-500">{{ result.id }}</p>
         </div>
         <div>
-          <p class="text-sm font-medium text-gray-900">Kullanıcı Tipi</p>
-          <p class="text-sm text-gray-500">{{ result.is_bot ? 'Bot Hesap' : 'Normal Hesap' }}</p>
+          <p class="text-sm font-medium text-gray-900">{{ $t("result.title.type") }}</p>
+          <p class="text-sm text-gray-500">{{ result.is_bot ? $t("result.type.bot") : $t("result.type.user") }}</p>
         </div>
       </template>
       <div>
-        <p class="text-sm font-medium text-gray-900">Oluşturma Tarihi</p>
+        <p class="text-sm font-medium text-gray-900">{{ $t("result.title.date") }}</p>
         <p class="text-sm text-gray-500">{{ createDate(result.created_at) }}</p>
       </div>
       <div>
-        <p class="text-sm font-medium text-gray-900">Oluşturma Yaşı</p>
+        <p class="text-sm font-medium text-gray-900">{{ $t("result.title.age") }}</p>
         <p class="text-sm text-gray-500">{{ createYear(result.created_at) }}</p>
       </div>
     </div>
@@ -120,10 +120,10 @@
       },
 
       createDate(unix) {
-        return moment(unix).locale("tr").format('Do MMMM YYYY, H:mm:ss');
+        return moment(unix).locale(this.$i18n.locale).format('D MMMM YYYY, H:mm:ss');
       },
       createYear(unix) {
-        return moment(unix).locale("tr").fromNow(true);
+        return moment(unix).locale(this.$i18n.locale).fromNow(true);
       },
 
       toggleStar() {
