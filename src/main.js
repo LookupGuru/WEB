@@ -4,13 +4,15 @@ import router from './router'
 import store from './store'
 
 // Set Api
-import { ApiUtil } from "@/utils/api.util";
-
-ApiUtil.init(
+import { Api } from "@/utils/api";
+Api.init(
   process.env.NODE_ENV === "production" ?
     "https://lookupguru.herokuapp.com/" :
     "http://localhost:3600/"
 );
+
+// I18n
+import i18n from '@/utils/i18n'
 
 // Vue Meta Mask
 import VueMeta from 'vue-meta'
@@ -40,8 +42,9 @@ if (process.env.NODE_ENV === "production") {
 Vue.config.productionTip = false
 
 new Vue({
-  router,
+  i18n,
   store,
+  router,
   render: h => h(App),
   metaInfo: {
     title: "Discord Search ID",
