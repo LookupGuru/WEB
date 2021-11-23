@@ -4,7 +4,8 @@ export default {
     languages: {
       tr: "Turkish",
       en: "English",
-      de: "German"
+      de: "German",
+      fr: "French"
     }
   },
   search: {

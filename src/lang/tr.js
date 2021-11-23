@@ -4,7 +4,8 @@ export default {
     languages: {
       tr: "Türkçe",
       en: "İngilizce",
-      de: "Almanca"
+      de: "Almanca",
+      fr: "Fransızca"
     },
   },
   search: {

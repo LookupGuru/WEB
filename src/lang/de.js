@@ -1,10 +1,13 @@
+// Translation: Emirhan Uğurlu
+
 export default {
   info: {
     name: "Deutsch",
     languages: {
-      tr: "Almanca",
-      en: "German",
-      de: "Deutsch"
+      tr: "Türkisch",
+      en: "Englisch",
+      de: "Deutsch",
+      fr: "Französisch"
     }
   },
   search: {
