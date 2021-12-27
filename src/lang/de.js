@@ -29,7 +29,7 @@ export default {
   },
   result: {
     title: {
-      id: "Benutzer ID",
+      id: "Benutzeridentifikation",
       type: "Benutzertyp",
       date: "Erstellungsdatum",
       age: "Alter"
