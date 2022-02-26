@@ -38,6 +38,48 @@ yarn build
 
 Merge requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/berkaltiok">
+        <img src="https://avatars.githubusercontent.com/u/17373485?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Berk Altıok</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Maintenance">🚧</a> 
+      <a href="#" title="Code">💻</a> 
+      <a href="#" title="Design">🎨</a>
+      <a href="#" title="Translation">🌍</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/kahverengi001">
+        <img src="https://avatars.githubusercontent.com/u/3341936?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Ahmet Enes Duruer</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Content">🖋</a>
+      <a href="#" title="Translation">🌍</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/emrhnugrl">
+        <img src="https://avatars.githubusercontent.com/u/71042332?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Emirhan Ugurlu</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Translation">🌍</a>
+      <a href="#" title="Design">🎨</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/tarikcoskun">
+        <img src="https://avatars.githubusercontent.com/u/44239968?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Tarık Coşkun</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Design">🎨</a>
+    </td>
+  </tr>
+</table>
+
 # License
 
 This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
