@@ -9,7 +9,9 @@ import de from '@/lang/de'
 import fr from '@/lang/fr'
 import ru from '@/lang/ru'
 
-let locale = localStorage.getItem("language") || navigator.language || navigator.userLanguage || 'en-US'
+let urlParams = new URLSearchParams(window.location.search);
+
+let locale = urlParams?.get('hl') || localStorage.getItem("language") || navigator.language || navigator.userLanguage || 'en-US'
 
 export default new VueI18n({
   locale,

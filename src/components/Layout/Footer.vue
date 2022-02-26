@@ -23,7 +23,11 @@
       changeLanguage(language) {
         localStorage.setItem("language", language);
         this.$i18n.locale = language;
+
+        this.$route.query.hl && this.$router.replace({
+          query: {}
+        })
       }
-    },
+    }
   }
 </script>

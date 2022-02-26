@@ -7,7 +7,8 @@ export default {
       tr: "Turc",
       en: "Anglais",
       de: "Allemand",
-      fr: "Français"
+      fr: "Français",
+      ru: "Russe",
     },
   },
   search: {

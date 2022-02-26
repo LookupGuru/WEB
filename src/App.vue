@@ -10,6 +10,21 @@
   import Footer from "@/components/Layout/Footer";
 
   export default {
+    metaInfo() {
+      let langList = []
+      this.$i18n.availableLocales.forEach(lang => {
+        langList.push({
+          rel: "alternate",
+          href: `https://lookup.guru/${lang !== this.$i18n.locale ? ('?hl=' + lang) : ""}`,
+          hreflang: lang
+        })
+      })
+      return {
+        meta: [
+          ...langList
+        ]
+      }
+    },
     data() {
       return {
         scrollTop: 0,
