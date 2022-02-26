@@ -1,6 +1,6 @@
 export default {
     info: {
-      name: "Tyrkisk",
+      name: "Dansk",
       languages: {
         tr: "Tyrkisk",
         en: "Engelsk",
