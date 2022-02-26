@@ -7,6 +7,7 @@ import en from '@/lang/en'
 import tr from '@/lang/tr'
 import de from '@/lang/de'
 import fr from '@/lang/fr'
+import ru from '@/lang/ru'
 
 let locale = localStorage.getItem("language") || navigator.language || navigator.userLanguage || 'en-US'
 
@@ -16,6 +17,7 @@ export default new VueI18n({
     en,
     tr,
     de,
-    fr
+    fr,
+    ru
   }
 })
