@@ -7,6 +7,7 @@ export default {
       de: "German",
       fr: "French",
       ru: "Russian",
+      da: "Danish",
     }
   },
   search: {

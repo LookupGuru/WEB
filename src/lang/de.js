@@ -8,7 +8,8 @@ export default {
       en: "Englisch",
       de: "Deutsch",
       fr: "Französisch",
-      ru: "Russisch"
+      ru: "Russisch",
+      da: "Dänisch",
     }
   },
   search: {

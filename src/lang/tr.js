@@ -7,6 +7,7 @@ export default {
       de: "Almanca",
       fr: "Fransızca",
       ru: "Rusça",
+      da: "Danca",
     },
   },
   search: {

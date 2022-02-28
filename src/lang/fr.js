@@ -9,6 +9,7 @@ export default {
       de: "Allemand",
       fr: "Français",
       ru: "Russe",
+      da: "Danois",
     },
   },
   search: {
