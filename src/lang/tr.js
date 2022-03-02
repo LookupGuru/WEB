@@ -1,13 +1,14 @@
 export default {
   info: {
     name: "Türkçe",
+    flag: "tr",
     languages: {
       tr: "Türkçe",
       en: "İngilizce",
       de: "Almanca",
       fr: "Fransızca",
       ru: "Rusça",
-      da: "Danca",
+      dk: "Danca",
     },
   },
   search: {

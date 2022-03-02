@@ -1,13 +1,14 @@
 export default {
   info: {
-    name: 'English',
+    name: "English",
+    flag: "gb",
     languages: {
       tr: "Turkish",
       en: "English",
       de: "German",
       fr: "French",
       ru: "Russian",
-      da: "Danish",
+      dk: "Danish",
     }
   },
   search: {

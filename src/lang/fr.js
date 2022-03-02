@@ -3,13 +3,14 @@
 export default {
   info: {
     name: "Français",
+    flag: "fr",
     languages: {
       tr: "Turc",
       en: "Anglais",
       de: "Allemand",
       fr: "Français",
       ru: "Russe",
-      da: "Danois",
+      dk: "Danois",
     },
   },
   search: {

@@ -1,13 +1,14 @@
 export default {
   info: {
     name: "Dansk",
+    flag: "dk",
     languages: {
       tr: "Tyrkisk",
       en: "Engelsk",
       de: "Tysk",
       fr: "Fransk",
-      da: "Dansk",
       ru: "Russisk",
+      dk: "Dansk",
     },
   },
   search: {
