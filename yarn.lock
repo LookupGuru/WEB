@@ -8143,6 +8143,11 @@ vue-clipboard2@^0.3.1:
   dependencies:
     clipboard "^2.0.0"
 
+vue-country-flag@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/vue-country-flag/-/vue-country-flag-2.3.2.tgz#db500a8ee287675b2990360b6fa100cdf7d444c2"
+  integrity sha512-YhSS+GbLT9tp8tjMXxJKlqpBUd6dbhQJrttKj8ZbHtBocorIomFDMVMxraWVMs3hxaCW6SsAYaREkoYM00ORiA==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
