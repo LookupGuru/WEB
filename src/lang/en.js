@@ -32,7 +32,7 @@ export default {
     title: {
       id: "User ID",
       type: "User Type",
-      date: "Created Date",
+      date: "Creation Date",
       age: "Age"
     },
     type: {
