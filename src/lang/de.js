@@ -11,6 +11,7 @@ export default {
       fr: "Französisch",
       ru: "Russisch",
       dk: "Dänisch",
+      pt: "Portugiesisch",
     }
   },
   search: {

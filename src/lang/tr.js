@@ -9,6 +9,7 @@ export default {
       fr: "Fransızca",
       ru: "Rusça",
       dk: "Danca",
+      pt: "Portekizce",
     },
   },
   search: {

@@ -9,6 +9,7 @@ export default {
       fr: "Fransk",
       ru: "Russisk",
       dk: "Dansk",
+      pt: "Portugisisk",
     },
   },
   search: {

@@ -51,7 +51,7 @@ new Vue({
     titleTemplate: '%s - Lookup.Guru',
     meta: [
       { name: 'title', content: 'Discord Search ID - Lookup.Guru' },
-      { name: 'description', content: 'Lookup and search Discord ID, discord bot and user account detail.' },
+      { name: 'description', content: 'Lookup.Guru is a free and open source Discord search engine. It allows you to search for Discord IDs and get information about them.' },
       { name: 'keywords', content: 'Discord Search ID, Discord Lookup, Discord ID Lookup, Discord ID Finder, Discord Look Up, Discord ID Tracker, Discord ID Search, Discord ID, Discord Search, Lookup.Guru, Lookup Guru, Discord, Search, ID, Lookup, Guru' }
     ]
   }

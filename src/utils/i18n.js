@@ -9,6 +9,7 @@ import de from '@/lang/de'
 import fr from '@/lang/fr'
 import ru from '@/lang/ru'
 import dk from '@/lang/dk'
+import pt from '@/lang/pt'
 
 let urlParams = new URLSearchParams(window.location.search);
 
@@ -23,5 +24,6 @@ export default new VueI18n({
     fr,
     ru,
     dk,
+    pt
   }
 })
