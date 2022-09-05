@@ -14,7 +14,7 @@
     <hr>
     <div class="grid sm:grid-cols-2 auto-rows-auto py-3 px-4 gap-3">
       <div v-for="item in 4">
-        <p class="text-sm font-medium text-gray-100 bg-gray-100 rounded w-28">{{ result.id }}</p>
+        <p class="text-sm font-medium text-gray-100 bg-gray-100 rounded w-28">xxxxxxxx</p>
         <p class="text-sm text-gray-100 bg-gray-100 w-[fit-content] rounded mt-1">xxxxxxxx</p>
       </div>
     </div>
