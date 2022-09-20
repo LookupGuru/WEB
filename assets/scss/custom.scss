@@ -1,0 +1,10 @@
+html,
+body,
+#__nuxt,
+#__layout {
+  @apply h-full w-full;
+}
+body {
+  @apply flex flex-col items-center justify-center text-gray-800;
+  background: #f3f4f6;
+}
