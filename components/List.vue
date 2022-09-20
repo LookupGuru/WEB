@@ -58,7 +58,7 @@
           <div class="inline-block font-semibold">
             <template v-if="result.username && result.discriminator">
               {{ result.username }}
-              <small class="text-md font-mono font-normal -ml-0.5">#{{ result.discriminator }}</small>
+              <small class="text-md -ml-0.5 font-mono font-normal">#{{ result.discriminator }}</small>
             </template>
             <template v-else>
               <span class="font-mono">{{ result.id }}</span>
@@ -120,11 +120,11 @@
           items: [
             {
               title: 'list.recent',
-              list: 'LookupGuruHistory',
+              list: 'LookupGuruHistory'
             },
             {
               title: 'list.favorites',
-              list: 'LookupGuruStar',
+              list: 'LookupGuruStar'
             }
           ],
           list: []

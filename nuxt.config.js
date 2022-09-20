@@ -3,13 +3,13 @@ export default {
     title: 'Discord Search ID',
     titleTemplate: '%s - Lookup.Guru',
     meta: [
-      {charset: 'utf-8'},
+      { charset: 'utf-8' },
       {
         name: 'viewport',
         content:
           'width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover'
       },
-      {name: 'format-detection', content: 'telephone=no'},
+      { name: 'format-detection', content: 'telephone=no' },
 
       {
         rel: 'search',
@@ -18,9 +18,9 @@ export default {
         href: '/opensearch.xml?v2'
       },
 
-      {rel: 'canonical', href: 'https://lookup.guru/'},
+      { rel: 'canonical', href: 'https://lookup.guru/' },
 
-      {hid: 'title', name: 'title', content: 'Discord Search ID - Lookup.Guru'},
+      { hid: 'title', name: 'title', content: 'Discord Search ID - Lookup.Guru' },
       {
         hid: 'description',
         name: 'description',
@@ -34,7 +34,7 @@ export default {
           'Discord Search ID, Discord Lookup, Discord ID Lookup, Discord ID Finder, Discord Look Up, Discord ID Tracker, Discord ID Search, Discord ID, Discord Search, Lookup.Guru, Lookup Guru, Discord, Search, ID, Lookup, Guru'
       }
     ],
-    link: [{rel: 'icon', type: 'image/x-icon', href: '/favicon.png'}]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,8 +42,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '~/plugins/clipboard.js', mode: 'client'},
-    {src: '~/plugins/tooltip.js', mode: 'client'}
+    { src: '~/plugins/clipboard.js', mode: 'client' },
+    { src: '~/plugins/tooltip.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
