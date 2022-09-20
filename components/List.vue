@@ -12,11 +12,12 @@
       </div>
     </div>
     <div class="mt-2 max-h-[500px] overflow-auto rounded-lg bg-white shadow">
-      <template v-for="result in tab.list" v-if="tab.list[0] !== null">
+      <template v-for="(result, index) in tab.list" v-if="tab.list[0] !== null">
         <nuxt-link
           :to="result.id"
           class="flex cursor-pointer items-center border-b py-3 pl-4 pr-3 transition-colors last:border-b-0 hover:bg-gray-50 hover:bg-opacity-40"
           v-if="result.id"
+          :key="index.toString() + result.id"
         >
           <div
             class="relative mr-3.5 flex h-[2rem] w-[2rem] flex-none items-center justify-center overflow-hidden rounded-full bg-gray-100"
@@ -57,7 +58,7 @@
           <div class="inline-block font-semibold">
             <template v-if="result.username && result.discriminator">
               {{ result.username }}
-              <small class="text-md ml-[1px] font-mono font-normal">#{{ result.discriminator }}</small>
+              <small class="text-md font-mono font-normal -ml-0.5">#{{ result.discriminator }}</small>
             </template>
             <template v-else>
               <span class="font-mono">{{ result.id }}</span>
@@ -119,11 +120,11 @@
           items: [
             {
               title: 'list.recent',
-              list: 'LookupGuruHistory'
+              list: 'LookupGuruHistory',
             },
             {
               title: 'list.favorites',
-              list: 'LookupGuruStar'
+              list: 'LookupGuruStar',
             }
           ],
           list: []
