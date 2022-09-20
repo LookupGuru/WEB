@@ -33,12 +33,6 @@ export default {
           content:
             'Lookup.Guru is a free and open source Discord search engine. It allows you to search for Discord IDs and get information about them.'
         },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content:
-            'Discord Search ID, Discord Lookup, Discord ID Lookup, Discord ID Finder, Discord Look Up, Discord ID Tracker, Discord ID Search, Discord ID, Discord Search, Lookup.Guru, Lookup Guru, Discord, Search, ID, Lookup, Guru'
-        },
         ...i18nHead.meta
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }, ...i18nHead.link]
