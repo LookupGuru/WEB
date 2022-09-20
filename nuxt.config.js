@@ -68,7 +68,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:3600',
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://lookupguru.herokuapp.com/' : 'http://localhost:3600/',
     headers: {
       common: {
         'Access-Control-Allow-Credentials': true,
