@@ -5,7 +5,7 @@
       <div class="relative">
         <input
           v-model="input"
-          class="block w-full rounded-md rounded-md border-gray-300 px-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          class="block w-full appearance-none rounded-md rounded-md border-gray-300 px-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           type="text"
           pattern="[0-9]*"
           inputmode="numeric"
@@ -14,6 +14,7 @@
           placeholder="Discord ID"
           autocomplete="off"
           ref="search"
+          @keyup="filterInput"
         />
         <span class="flex flex-col px-1 pt-1 text-xs text-red-500" v-if="$v.input.$error">
           <span v-if="!$v.input.required">{{ $t('search.input.required') }}</span>
@@ -103,6 +104,9 @@
       }
     },
     methods: {
+      filterInput() {
+        this.input = this.input.replace(/\D/g, '')
+      },
       sendForm() {
         if (this.$v.$invalid) {
           this.$v.$touch()
