@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-4 overflow-auto rounded-md bg-white shadow" v-if="result">
+  <div class="mt-4 overflow-auto rounded-md bg-white shadow" v-if="$store.state.result">
     <template v-if="result.type === 'USER'">
       <div
         class="min-h-[60px] w-full border-b"
