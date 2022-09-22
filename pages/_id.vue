@@ -25,6 +25,7 @@
       List,
       Placeholder
     },
+    middleware: 'check',
     async fetch() {
       if (!this.$route.params.id) return false
       await this.$axios
