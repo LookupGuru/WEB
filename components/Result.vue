@@ -148,6 +148,35 @@
   import moment from 'moment'
 
   export default {
+    head() {
+      return {
+        script: [
+          {
+            type: 'application/ld+json',
+            json: [
+              {
+                '@context': 'https://schema.org',
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: 'LookupGuru',
+                    item: 'https://lookup.guru'
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: this.$route.params.id,
+                    item: `https://lookup.guru/${this.$route.params.id}`
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
     data() {
       return {
         star: null
