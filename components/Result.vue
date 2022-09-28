@@ -150,6 +150,7 @@
   export default {
     head() {
       return {
+        title: this.title,
         script: [
           {
             type: 'application/ld+json',
@@ -188,6 +189,11 @@
           id: this.$route?.params?.id,
           ...this.$store.state?.result
         }
+      },
+      title() {
+        return this.result?.username
+          ? `${this.result.username}#${this.result?.discriminator} (${this.$route.params.id})`
+          : this.$route.params.id
       }
     },
     methods: {
