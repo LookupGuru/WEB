@@ -151,6 +151,13 @@
     head() {
       return {
         title: this.title,
+        meta: [
+          {
+            hid: 'title',
+            name: 'title',
+            content: this.title
+          }
+        ],
         script: [
           {
             type: 'application/ld+json',
