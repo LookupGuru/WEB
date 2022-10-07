@@ -9,7 +9,8 @@ export default {
       fr: 'Fransızca',
       ru: 'Rusça',
       dk: 'Danca',
-      pt: 'Portekizce'
+      pt: 'Portekizce',
+      gr: 'Yunanca'
     }
   },
   search: {

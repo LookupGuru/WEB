@@ -9,7 +9,8 @@ export default {
       fr: 'French',
       ru: 'Russian',
       dk: 'Danish',
-      pt: 'Portuguese'
+      pt: 'Portuguese',
+      gr: 'Greek'
     }
   },
   search: {

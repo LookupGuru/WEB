@@ -125,6 +125,11 @@ export default {
         code: 'pt',
         file: 'pt-PT.js',
         iso: 'pt-PT'
+      },
+      {
+        code: 'gr',
+        file: 'gr-GR.js',
+        iso: 'gr-GR'
       }
     ],
     langDir: 'lang/',

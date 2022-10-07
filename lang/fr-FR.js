@@ -11,7 +11,8 @@ export default {
       fr: 'Français',
       ru: 'Russe',
       dk: 'Danois',
-      pt: 'Portugais'
+      pt: 'Portugais',
+      gr: 'Grec'
     }
   },
   search: {
