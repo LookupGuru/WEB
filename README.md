@@ -1,4 +1,5 @@
 # WEB
+[![Crowdin](https://badges.crowdin.net/lookupguru/localized.svg)](https://crowdin.com/project/lookupguru)
 
 ## Build Setup
 
