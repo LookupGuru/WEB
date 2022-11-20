@@ -1,7 +1,7 @@
 <h2 align="center">Discord Lookup ID</h2>
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2022?style=plastic" alt="Maintained">
-  <a href="https://github.com/berkaltiok/DiscordID/blob/dev/LICENSE"><img src="https://img.shields.io/github/license/berkaltiok/DiscordID?sanitize=true&style=plastic" alt="License"></a>
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat" alt="Maintained">
+  <a href="https://github.com/berkaltiok/DiscordID/blob/dev/LICENSE"><img src="https://img.shields.io/github/license/berkaltiok/DiscordID?sanitize=true&style=flat" alt="License"></a>
   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/lookupguru"><img src="https://badges.crowdin.net/lookupguru/localized.svg"></a>
 </p>
 
