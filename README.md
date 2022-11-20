@@ -1,69 +1,91 @@
-# WEB
-[![Crowdin](https://badges.crowdin.net/lookupguru/localized.svg)](https://crowdin.com/project/lookupguru)
+<h2 align="center">Discord Lookup ID</h2>
+<p align="center">
+  <img src="https://img.shields.io/maintenance/yes/2022?style=plastic" alt="Maintained">
+  <a href="https://github.com/berkaltiok/DiscordID/blob/dev/LICENSE"><img src="https://img.shields.io/github/license/berkaltiok/DiscordID?sanitize=true&style=plastic" alt="License"></a>
+  <a title="Crowdin" target="_blank" href="https://crowdin.com/project/lookupguru"><img src="https://badges.crowdin.net/lookupguru/localized.svg"></a>
+</p>
 
-## Build Setup
+---
+
+# Project Setup
+
+Always use <a href="https://yarnpkg.com/">yarn</a> to avoid conflicting .lock file issues.
+
+### Install
+
+First, install all packages with `yarn`:
 
 ```bash
-# install dependencies
 $ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+### Development
 
-## Special Directories
+For starting to development, use this command:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+```bash
+$ yarn dev
+```
 
-### `assets`
+### Build
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+For production-ready build, use this command:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```bash
+$ yarn build
+$ yarn start
+```
 
-### `components`
+# Contributing
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Merge requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/berkaltiok">
+        <img src="https://avatars.githubusercontent.com/u/17373485?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Berk Altıok</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Maintenance">🚧</a> 
+      <a href="#" title="Code">💻</a> 
+      <a href="#" title="Design">🎨</a>
+      <a href="#" title="Translation">🌍</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/kahverengi001">
+        <img src="https://avatars.githubusercontent.com/u/3341936?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Ahmet Enes Duruer</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Content">🖋</a>
+      <a href="#" title="Translation">🌍</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/emrhnugrl">
+        <img src="https://avatars.githubusercontent.com/u/71042332?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Emirhan Ugurlu</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Translation">🌍</a>
+      <a href="#" title="Design">🎨</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/tarikcoskun">
+        <img src="https://avatars.githubusercontent.com/u/44239968?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>Tarık Coşkun</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Design">🎨</a>
+    </td>
+  </tr>
+</table>
 
-### `layouts`
+# License
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+---
 
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<p align="center">Not affiliated with Discord, Inc.</p>
