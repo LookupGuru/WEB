@@ -25,10 +25,10 @@
             <template v-if="result.type === 'USER'">
               <img
                 :alt="result.username"
-                :src="result.avatar && result.avatar.url"
+                :src="result.avatar && result.avatar.url + '?size=64'"
                 v-if="result.avatar && result.avatar.id"
-                class="relative z-20 h-full w-full object-cover object-center"
-                @error="hiddenImage"
+                class="relative z-20 hidden h-full w-full object-cover object-center"
+                @load="$event.target.classList.add('!block')"
               />
               <div class="absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center duration-200">
                 <svg class="h-auto w-3.5 fill-current text-gray-300" viewBox="0 0 28 20">
@@ -156,9 +156,6 @@
         localStorage.setItem(name, JSON.stringify(getData))
 
         this.updateLocalList()
-      },
-      hiddenImage(element) {
-        element.currentTarget.className += ' hidden'
       }
     },
     created() {
