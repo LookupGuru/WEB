@@ -6,6 +6,7 @@
           class="flex h-full w-full items-center justify-center border-b-2 border-transparent pt-0.5 text-[14px] font-medium tracking-[.1px] text-gray-500 outline-none transition-all focus:outline-none"
           :class="{ 'border-indigo-700 !text-gray-800': key === tab.active }"
           @click="updateTab(key)"
+          aria-label="Tab Button"
         >
           {{ $t(item.title) }}
         </button>
@@ -68,6 +69,7 @@
             @click.prevent="removeItem(tab.items[tab.active].list, result.id)"
             class="group ml-auto flex h-[28px] min-w-[28px] flex-none items-center justify-center rounded-md outline-none transition-all hover:bg-red-50 focus:outline-none"
             :class="{ 'bg-red-50': result.id === deleteItem }"
+            aria-label="Remove Item Button"
           >
             <span class="px-2 text-xs font-semibold uppercase text-red-500" v-if="result.id === deleteItem">
               {{ $t('list.approve') }}

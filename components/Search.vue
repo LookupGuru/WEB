@@ -28,6 +28,7 @@
           :disabled="loading"
           type="submit"
           class="flex h-[38px] w-full select-none items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 text-sm font-medium text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-gray-500"
+          aria-label="Submit Button"
         >
           <svg v-if="loading" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 100 100">
             <circle cx="50" cy="50" fill="none" r="30" stroke="fff" stroke-width="10" />
@@ -69,6 +70,7 @@
           type="button"
           @click="sendHome"
           class="flex h-[38px] w-[38px] flex-none select-none items-center justify-center rounded-md border border-transparent bg-green-600 text-sm font-medium text-white transition-colors hover:bg-green-700 focus:outline-none"
+          aria-label="Home Button"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path
