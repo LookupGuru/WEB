@@ -12,8 +12,7 @@ export default {
         { charset: 'utf-8' },
         {
           name: 'viewport',
-          content:
-            'width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover'
+          content: 'width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5'
         },
         { name: 'format-detection', content: 'telephone=no' },
 
