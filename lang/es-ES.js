@@ -11,7 +11,7 @@ export default {
       dk: 'Danesa',
       pt: 'Portugués',
       gr: 'Griego',
-      es: 'Español'
+      es: 'Español',
     }
   },
   search: {
