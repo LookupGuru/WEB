@@ -10,7 +10,8 @@ export default {
       ru: 'Russian',
       dk: 'Danish',
       pt: 'Portuguese',
-      gr: 'Greek'
+      gr: 'Greek',
+      es: 'Español'
     }
   },
   search: {
