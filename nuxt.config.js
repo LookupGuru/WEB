@@ -54,11 +54,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/google-adsense'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/i18n', '@nuxtjs/google-adsense'],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -81,6 +82,10 @@ export default {
 
   googleAnalytics: {
     id: 'UA-89120054-6'
+  },
+
+  'google-adsense': {
+    id: 'ca-pub-#########'
   },
 
   server: {
