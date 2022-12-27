@@ -44,7 +44,38 @@ export default {
     favorites: {
       add: 'Add Favorites',
       remove: 'Remove Favorites'
-    }
+    },
+    flags: {
+      THANKS_1: {
+        title: "Development and Contribution",
+        text: "Those who contributed to the development of the project."
+      },
+      HYPESQUAD_EVENTS: {
+        title: "Discord HypeSquad"
+      },
+      HOUSE_BALANCE: {
+        title: "HypeSquad Balance"
+      },
+      EARLY_SUPPORTER: {
+        title: "Early Supporter"
+      },
+      BUGHUNTER_LEVEL_2: {
+        "title": "BugHunter Level 2"
+      },
+      EARLY_VERIFIED_BOT_DEVELOPER: {
+        "title": "Early Verified Bot Developer"
+      },
+      ACTIVE_DEVELOPER: {
+        "title": "Active Developer"
+      },
+      DISCORD_CERTIFIED_MODERATOR: {
+        "title": "Discord Certified Moderator"
+      },
+      NITRO: {
+        "title": "Nitro Subscriber",
+        "text": "This data is 99% accurate.\nThere may be a margin of error."
+      }
+    },
   },
   selectLanguage: 'Language',
   discord: 'Not affiliated with Discord, Inc.'

@@ -90,7 +90,7 @@
               class="mr-[1px] h-[30px] flex-none cursor-pointer rounded-md p-[4px] transition-colors hover:bg-gray-100"
               v-tooltip.bottom="{
                 content:
-                  `<div class='tooltip__title'>${content.title}</div>` +
+                  `<div class='tooltip__title'>${$t(`result.flags.${flag}.title`)}</div>` +
                   (content.text ? `<div class='tooltip__text'>${content.text}</div>` : '')
               }"
             >

@@ -44,7 +44,38 @@ export default {
     favorites: {
       add: 'Добавить в Избранные',
       remove: 'Удалить Избранные'
-    }
+    },
+    flags: {
+      THANKS_1: {
+        title: "Развитие и вклад",
+        text: "Те, кто внес свой вклад в развитие проекта."
+      },
+      HYPESQUAD_EVENTS: {
+        title: "Discord HypeSquad"
+      },
+      HOUSE_BALANCE: {
+        title: "HypeSquad Баланс"
+      },
+      EARLY_SUPPORTER: {
+        title: "Сторонник раннего периода"
+      },
+      BUGHUNTER_LEVEL_2: {
+        "title": "Уровень охотника за ошибками 2"
+      },
+      EARLY_VERIFIED_BOT_DEVELOPER: {
+        "title": "Ранний одобренный разработчик"
+      },
+      ACTIVE_DEVELOPER: {
+        "title": "Активный разработчик"
+      },
+      DISCORD_CERTIFIED_MODERATOR: {
+        "title": "Утвержденный модератор Discord"
+      },
+      NITRO: {
+        "title": "Нитро Подписчик",
+        "text": "Эти данные точны на 99%..\nМожет быть погрешность."
+      }
+    },
   },
   selectLanguage: 'Язык',
   discord: 'Не связан с Discord, Inc.'

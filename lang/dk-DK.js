@@ -44,7 +44,39 @@ export default {
     favorites: {
       add: 'Tilføj Favoritter',
       remove: 'Fjern Favoritter'
-    }
+    },
+
+    flags: {
+      THANKS_1: {
+        title: "Udvikling og bidrag",
+        text: "Dem, der har bidraget til udviklingen af projektet."
+      },
+      HYPESQUAD_EVENTS: {
+        title: "Discord HypeSquad"
+      },
+      HOUSE_BALANCE: {
+        title: "HypeSquad Balance"
+      },
+      EARLY_SUPPORTER: {
+        title: "Supporter for tidlig periode"
+      },
+      BUGHUNTER_LEVEL_2: {
+        "title": "BugHunter Niveau 2"
+      },
+      EARLY_VERIFIED_BOT_DEVELOPER: {
+        "title": "Tidlig godkendt udvikler"
+      },
+      ACTIVE_DEVELOPER: {
+        "title": "Aktiv udvikler"
+      },
+      DISCORD_CERTIFIED_MODERATOR: {
+        "title": "Discord godkendt moderator"
+      },
+      NITRO: {
+        "title": "Nitro abonnent",
+        "text": "Disse data er 99 % nøjagtige.\nDer kan være en fejlmargin."
+      }
+    },
   },
   selectLanguage: 'Sprog',
   discord: 'Ikke tilknyttet Discord, Inc.'
