@@ -91,7 +91,7 @@
               v-tooltip.bottom="{
                 content:
                   `<div class='tooltip__title'>${$t(`result.flags.${flag}.title`)}</div>` +
-                  (content.text ? `<div class='tooltip__text'>${content.text}</div>` : '')
+                  (content.text ? `<div class='tooltip__text'>${$t(`result.flags.${flag}.text`)}</div>` : '')
               }"
             >
               <img :src="require(`@/assets/badges/${flag}.svg`)" :alt="flag" class="h-full w-full object-contain" />
