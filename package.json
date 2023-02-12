@@ -11,6 +11,9 @@
     "lint": "yarn lint:prettier",
     "lintfix": "prettier --write --list-different ."
   },
+  "engines": {
+    "node": "16"
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-adsense": "^2.1.0",
