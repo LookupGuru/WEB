@@ -1,8 +1,14 @@
 export default function ({ route, redirect, store }) {
-  if (!route.params.id) return
-  if (!/^\d+$/.test(route.params.id) && route.params.id.length < 23 && route.params.id.length > 14) {
+  const cancelAction = () => {
     store.commit('setResult', null)
     store.commit('setLoading', false)
     return redirect('/')
   }
+
+  if (!route.params.id) return
+  console.log(route.params.id.length)
+
+  if (!/^\d+$/.test(route.params.id)) return cancelAction()
+  if (route.params.id.length > 23) return cancelAction()
+  if (route.params.id.length < 14) return cancelAction()
 }
