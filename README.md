@@ -79,6 +79,14 @@ Merge requests are welcome. For major changes, please open an issue first to dis
       <br />
       <a href="#" title="Design">🎨</a>
     </td>
+    <td align="center">
+      <a href="https://github.com/b1bxonty">
+        <img src="https://avatars.githubusercontent.com/u/113876709?v=3?s=100" width="100px;" alt=""/><br />
+        <sub><b>B1BXONTY</b></sub>
+      </a>
+      <br />
+      <a href="#" title="Translation">🌍</a>
+    </td>
   </tr>
 </table>
 
