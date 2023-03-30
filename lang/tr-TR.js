@@ -10,7 +10,8 @@ export default {
       ru: 'Rusça',
       dk: 'Danca',
       pt: 'Portekizce',
-      gr: 'Yunanca'
+      gr: 'Yunanca',
+      es: "Español"
     }
   },
   search: {

@@ -129,6 +129,11 @@ export default {
         code: 'gr',
         file: 'gr-GR.js',
         iso: 'gr-GR'
+      },
+      {
+        code: 'es',
+        file: 'es-ES.js',
+        iso: 'es-ES'
       }
     ],
     langDir: 'lang/',
