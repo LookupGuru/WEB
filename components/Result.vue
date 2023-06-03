@@ -78,11 +78,11 @@
         </a>
         <div class="flex flex-1 flex-col">
           <div
-            @click="copyText(`${result.username}#${result.discriminator}`)"
+            @click="copyText(result.username + (result.discriminator !== 0 && `#${result.discriminator}`))"
             class="ml-1 inline-block w-[fit-content] cursor-pointer rounded-md px-1.5 text-xl font-semibold transition-colors hover:bg-gray-100"
           >
             <span>{{ result.username }}</span>
-            <small class="text-md -ml-1 font-mono font-normal">#{{ result.discriminator }}</small>
+            <small v-if="result.discriminator !== 0" class="text-md -ml-1 font-mono font-normal">#{{ result.discriminator }}</small>
           </div>
           <div class="mt-[1px] flex select-none flex-wrap items-center px-2">
             <div
