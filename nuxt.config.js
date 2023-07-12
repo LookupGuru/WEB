@@ -129,6 +129,11 @@ export default {
         code: 'gr',
         file: 'gr-GR.js',
         iso: 'gr-GR'
+      },
+      {
+        code: 'az',
+        file: 'az-AZ.js',
+        iso: 'az-AZ'
       }
     ],
     langDir: 'lang/',

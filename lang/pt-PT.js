@@ -8,9 +8,10 @@ export default {
       de: 'Alemão',
       fr: 'Francês',
       ru: 'Russo',
-      dk: 'dinamarquês',
+      dk: 'Dinamarquês',
       pt: 'Português',
-      gr: 'Grego'
+      gr: 'Grego',
+      az: 'Azerbaijano'
     }
   },
   search: {
