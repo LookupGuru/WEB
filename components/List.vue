@@ -59,7 +59,7 @@
           <div class="inline-block font-semibold">
             <template v-if="result.username && result.discriminator">
               {{ result.username }}
-              <small class="text-md -ml-0.5 font-mono font-normal">#{{ result.discriminator }}</small>
+              <small class="text-md -ml-0.5 font-mono font-normal" v-if="result.discriminator !== '0'">#{{ result.discriminator }}</small>
             </template>
             <template v-else>
               <span class="font-mono">{{ result.id }}</span>
